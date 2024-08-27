@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { nunito } from "@/config/fonts";
 
-import { Navbar, Socials } from "@/components";
+import { MobileMenu, Navbar, Socials } from "@/components";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -20,6 +20,7 @@ export default function RootLayout({
         <main className="min-h-screen container mx-auto relative">
 
           <Navbar />
+          <MobileMenu />  
 
           {children}
 

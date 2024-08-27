@@ -1,2 +1,6 @@
-export { Navbar } from "./ui/Navbar";
-export { Socials } from "./ui/Socials";
+// Top Menu
+export { Navbar } from "./ui/top-menu/Navbar";
+export { MobileMenu } from "./ui/top-menu/MobileMenu";
+
+// Flotantes
+export { Socials } from "./ui/floating/Socials";
