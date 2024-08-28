@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={nunito.className}>
-        <main className="min-h-screen container mx-auto relative">
+        <main className="min-h-screen container mx-auto px-4 relative">
 
           <Navbar />
           <MobileMenu />  

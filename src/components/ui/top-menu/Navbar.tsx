@@ -34,15 +34,15 @@ export const Navbar = () => {
         </button>
 
         <Link 
-          className="ml-2 py-2 px-3 transition-all hover:text-primary hidden sm:block"
+          className="ml-2 py-2 px-3 text-secondary font-semibold uppercase transition-all hover:text-primary hidden sm:block"
           href="/about"
         >About</Link>
         <Link 
-          className="ml-2 py-2 px-3 transition-all hover:text-primary hidden sm:block"
+          className="ml-2 py-2 px-3 text-secondary font-semibold uppercase transition-all hover:text-primary hidden sm:block"
           href="/projects/1"
         >Projects</Link>
         <Link 
-          className="ml-2 py-2 px-3 transition-all hover:text-primary hidden sm:block"
+          className="ml-2 py-2 pl-3 text-secondary font-semibold uppercase transition-all hover:text-primary hidden sm:block"
           href="/contact"
         >Contact</Link>
 
