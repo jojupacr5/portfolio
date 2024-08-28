@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { nunito } from "@/config/fonts";
 
-import { MobileMenu, Navbar, Socials } from "@/components";
+import { MobileMenu, Navbar, NextPage, Socials } from "@/components";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -25,6 +25,7 @@ export default function RootLayout({
           {children}
 
           <Socials />
+          <NextPage />
         </main>
       </body>
     </html>

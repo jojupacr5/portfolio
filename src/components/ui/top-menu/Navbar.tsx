@@ -12,12 +12,13 @@ export const Navbar = () => {
   const closeMenu = useUIStore( state => state.closeSideMenu);
 
   return (
-    <nav className="flex py-4 justify-between items-center w-full text-secondary">
+    <nav className="flex pt-4 justify-between items-center w-full text-secondary">
       {/* Logo */}
       <div >
         <Link
           className="flex flex-col"
-          href="/"  
+          href="/" 
+          onClick={closeMenu} 
         >
           <span className={`${titleFont.className} antialiased text-5xl tracking-wider m-0 p-0`}>JP.</span>
           <span className="text-md -mt-2"> Joseph Paucar</span>

@@ -3,6 +3,6 @@
 @tailwind utilities;
 
 .pt__height-cal {
-  top: 96px;
-  height: calc(100vh - 96px);
+  top: 80px;
+  height: calc(100vh - 80px);
 }

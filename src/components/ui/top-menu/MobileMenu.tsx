@@ -14,7 +14,7 @@ export const MobileMenu = () => {
       {/* Background Glass */}
       {
         isSideMenuOpen && (
-          <div className="pt__height-cal fixed left-0 w-screen z-10 shadow-sm bg-white/10 backdrop-blur-sm" />
+          <div className="pt__height-cal fixed left-0 w-screen z-10 shadow-sm bg-white/70 backdrop-blur-sm" />
         )        
       }
 
