@@ -11,6 +11,16 @@ export const Navbar = () => {
   const openMenu = useUIStore( state => state.openSideMenu);
   const closeMenu = useUIStore( state => state.closeSideMenu);
 
+  const handleOpen = () => {
+    openMenu();
+    document.body.classList.add("overflow-hidden");
+  }
+  
+  const handleClose = () => {
+    closeMenu();
+    document.body.classList.remove("overflow-hidden");
+  }
+
   return (
     <nav className="flex pt-4 justify-between items-center w-full text-secondary">
       {/* Logo */}
@@ -51,7 +61,7 @@ export const Navbar = () => {
           !isSideMenuOpen
             ? (
               <button 
-                onClick={openMenu}
+                onClick={handleOpen}
                 className="mx-2 p-2 sm:hidden"
               >
                 <RiMenu3Fill  className="w-6 h-6" />
@@ -59,7 +69,7 @@ export const Navbar = () => {
               )
             : (
               <button 
-                onClick={closeMenu}
+                onClick={handleClose}
                 className="mx-2 p-2 sm:hidden"
               >
                 <RiCloseFill  className="w-6 h-6" />

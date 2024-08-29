@@ -14,21 +14,21 @@ export const MobileMenu = () => {
       {/* Background Glass */}
       {
         isSideMenuOpen && (
-          <div className="pt__height-cal fixed left-0 w-screen z-10 shadow-sm bg-white/70 backdrop-blur-sm" />
+          <div className="pt__mobile-menu fixed left-0 w-screen z-10 shadow-sm bg-white/70 backdrop-blur-sm" />
         )        
       }
 
       <nav
         className={
           clsx(
-            "pt__height-cal fixed p-5 right-0 w-screen bg-transparent z-20 transform transition-all duration-300",
+            "pt__mobile-menu fixed p-5 right-0 w-screen bg-transparent z-20 transform transition-all duration-300",
             {
               "translate-x-full": !isSideMenuOpen
             }
           )
         }
       >
-        <div className="pt__height-cal flex flex-col w-full items-center justify-center">
+        <div className="pt__mobile-menu flex flex-col w-full items-center justify-center">
           <Link 
             className="py-2 px-3 text-lg mb-4 transition-all hover:text-primary uppercase font-bold"
             href="/about"

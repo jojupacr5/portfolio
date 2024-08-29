@@ -1,5 +1,7 @@
-import { CustomSpan } from "@/components";
+'use client'
+import { AboutMe, CustomSpan, AlsoMe } from "@/components";
 import { titleFont } from "@/config/fonts";
+import useWindowDimensions from "@/hooks/ui/getWindowDimensions";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -7,95 +9,90 @@ const logos = [
   {
     path: "/images/firebase.png",
     alt: "Firebase Logo",
-    top: "top-12",
-    right: "right-64",
+    top: "-top-8",
+    right: "right-44 md:right-64 xl:right-96",
     bottom: "",
-    width: 80,
-    height: 80,
   },
   {
     path: "/images/nextjs.png",
     alt: "NextJs Logo",
-    top: "top-48",
-    right: "right-20",
+    top: "top-4 lg:top-16",
+    right: "right-12 md:right-28 xl:right-48",
     bottom: "",
-    width: 140,
-    height: 80,
   },
   {
     path: "/images/ubuntu.png",
     alt: "Ubuntu Logo",
-    top: "top-64",
-    right: "right-4",
+    top: "top-24 lg:top-48",
+    right: "right-0 md:right-4 xl:right-8",
     bottom: "",
-    width: 100,
-    height: 100,
   },
   {
     path: "/images/react.png",
     alt: "React Logo",
     top: "",
-    right: "right-20",
+    right: "right-2 md:right-2 lg:right-20",
     bottom: "bottom-4",
-    width: 100,
-    height: 100,
   },
   {
     path: "/images/javascript.png",
     alt: "JavaScript Logo",
     top: "",
-    right: "right-56",
-    bottom: "-bottom-4",
-    width: 100,
-    height: 100,
+    right: "right-24 md:right-32 lg:right-56",
+    bottom: "-bottom-4 xl:-bottom-8",
   },
   {
     path: "/images/vue.png",
     alt: "Vue Logo",
     top: "",
-    right: "right-96",
-    bottom: "-bottom-8",
-    width: 90,
-    height: 90,
+    right: "right-48 md:right-64 lg:right-96",
+    bottom: "-bottom-8 xl:-bottom-16",
   },
 ]
 
 export default function Home() {
+  const { width } = useWindowDimensions();
+
   return (
-    <main className="md:pt__height-cal grid grid-cols-12 gap-4 md:items-center">
-      <div className="mt-12 mb-12 md:mb-0 md:-mt-10 col-start-1 col-end-12 md:col-start-2 md:col-span-11 z-0 relative">
+    <main className="grid grid-cols-12 gap-4 pt__height-cal sm:items-center">
+      <div className="my-12 z-0 relative col-start-1 col-end-12 sm:my-0 sm:-mt-10 sm:col-start-2 sm:col-span-11 ">
+        
         {
           logos.map( logo => (
             <div
               key={logo.path} 
-              className={`hidden md:block absolute -z-10 ${logo.top} ${logo.right} ${logo.bottom}`}>
+              className={`hidden w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 xl:w-32 xl:h-32 sm:block absolute -z-10 ${logo.top} ${logo.right} ${logo.bottom}`}>
               <Image
                 src={logo.path}
                 alt={logo.alt}
-                width={logo.width}
-                height={logo.height}
+                fill
+                className="w-full h-full top-0 left-0 object-contain"
               />
             </div>
           ))
         }
+      
+
         <CustomSpan text="<html>" ml="-ml-2 md:-ml-3" />
         <CustomSpan text="<body>" mb="mb-6" />
 
-        <div className="relative max-w-[800px]">
+        <div className="relative max-w-[350px] sm:max-w-[500px] md:max-w-[590px] lg:max-w-[780px]">
           <CustomSpan text="<h1>" />
-          <h1 className={`${titleFont.className} leading-none text-6xl md:text-8xl text-secondary`}>
+          
+          <h1 className={`${titleFont.className} leading-none text-6xl md:text-7xl lg:text-8xl text-secondary`}>
             Hello 
             <hr className="border-none mb-0 md:mb-4" /> 
             I&apos;m <span className="text-primary">Joseph</span> 
             <hr className="border-none mb-0 md:mb-4" />  
             Web Developer
           </h1>
-          <CustomSpan text="</h1>" absolute="absolute -bottom-2 -right-5" />
 
+          <CustomSpan text="</h1>" absolute="absolute -bottom-2 -right-5" />
         </div> 
-        <div className="relative max-w-[360px] mt-8 mb-12">
+        
+        <div className="relative max-w-[320px] md:max-w-[355px] mt-8 mb-12">
           <CustomSpan text="<p>" />
-          <p className="text-lg md:text-xl text-secondary">Especialized in <span className="text-primary">Frontend</span> development</p>
+          <p className="text-lg md:text-xl text-secondary">Especialized in <span className="text-primary">Frontend</span> development</p>    
           <CustomSpan text="</p>" absolute="absolute -bottom-2 -right-5" /> 
         </div> 
         
@@ -108,6 +105,14 @@ export default function Home() {
           </button>
         </div>
       </div>
+      {
+        (width < 640) && (
+        <div className="mt-12 mb-24 z-0 col-start-1 col-end-13 sm:my-0 sm:-mt-10 ">
+          <AboutMe />   
+          <AlsoMe />
+        </div>
+        )
+      }
     </main>
   );
 }

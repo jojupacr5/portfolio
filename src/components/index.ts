@@ -1,10 +1,15 @@
-// Top Menu
+// UI - Top Menu
 export { Navbar } from "./ui/top-menu/Navbar";
 export { MobileMenu } from "./ui/top-menu/MobileMenu";
 
-// Flotantes
+// UI - Flotantes
 export { Socials } from "./ui/floating/Socials";
 export { NextPage } from "./ui/floating/NextPage";
 
-// Pages
+// UI - Pages
 export { CustomSpan } from "./ui/pages/CustomSpan";
+
+// About - AboutMe
+export { AboutMe } from "./about/AboutMe";
+export { AlsoMe } from "./about/AlsoMe";
+export { AccordionItem } from "./about/AccordionItem";
