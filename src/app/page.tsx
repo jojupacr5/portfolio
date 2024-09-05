@@ -1,7 +1,6 @@
 'use client'
 import { AboutMe, CustomSpan, AlsoMe, NextPage } from "@/components";
 import { titleFont } from "@/config/fonts";
-import useWindowDimensions from "@/hooks/ui/getWindowDimensions";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -51,7 +50,6 @@ const logos = [
 ]
 
 export default function Home() {
-  const { width } = useWindowDimensions();
 
   return (
     <main className="grid grid-cols-12 gap-4 pt__height-cal sm:items-center">
@@ -105,14 +103,12 @@ export default function Home() {
           </button>
         </div>
       </div>
-      {
-        (width < 640) && (
-        <div className="mt-12 mb-24 z-0 col-start-1 col-end-13 sm:my-0 sm:-mt-10 ">
-          <AboutMe />   
-          <AlsoMe />
-        </div>
-        )
-      }
+
+      <div className="block sm:hidden mt-12 mb-24 z-0 col-start-1 col-end-13 sm:my-0 sm:-mt-10 ">
+        <AboutMe />   
+        <AlsoMe />
+      </div>
+
 
       <NextPage />
     </main>

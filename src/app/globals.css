@@ -19,15 +19,6 @@
   height: 320px;
 }
 
-.swiper-slide {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 22px;
-  font-weight: bold;
-  color: #fff;
-}
-
 .swiper-slide:nth-child(1n) {
   @apply bg-primary;
 }
