@@ -28,7 +28,7 @@ export const Navbar = () => {
         <Link
           className="flex flex-col"
           href="/" 
-          onClick={closeMenu} 
+          onClick={handleClose} 
         >
           <span className={`${titleFont.className} antialiased text-5xl tracking-wider m-0 p-0`}>JP.</span>
           <span className="text-md -mt-2"> Joseph Paucar</span>

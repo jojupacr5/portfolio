@@ -1,5 +1,5 @@
 'use client'
-import { AboutMe, CustomSpan, AlsoMe } from "@/components";
+import { AboutMe, CustomSpan, AlsoMe, NextPage } from "@/components";
 import { titleFont } from "@/config/fonts";
 import useWindowDimensions from "@/hooks/ui/getWindowDimensions";
 import Image from "next/image";
@@ -113,6 +113,8 @@ export default function Home() {
         </div>
         )
       }
+
+      <NextPage />
     </main>
   );
 }

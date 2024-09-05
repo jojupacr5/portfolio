@@ -13,3 +13,29 @@
     height: calc(100vh - 80px);
   }
 }
+
+.swiper {
+  width: 240px;
+  height: 320px;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.swiper-slide:nth-child(1n) {
+  @apply bg-primary;
+}
+
+.swiper-slide:nth-child(2n) {
+  @apply bg-white-secondary;
+}
+
+.swiper-slide:nth-child(3n) {
+  @apply bg-black-secondary;
+}
