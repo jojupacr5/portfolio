@@ -22,7 +22,7 @@ export const Navbar = () => {
   }
 
   return (
-    <nav className="flex pt-4 justify-between items-center w-full text-secondary">
+    <nav className="flex pt-4 justify-between items-center w-full text-secondary dark:text-white-primary">
       {/* Logo */}
       <div >
         <Link
@@ -45,15 +45,15 @@ export const Navbar = () => {
         </button>
 
         <Link 
-          className="ml-2 py-2 px-3 text-secondary font-semibold uppercase transition-all hover:text-primary hidden sm:block"
+          className="ml-2 py-2 px-3 text-secondary dark:text-white-primary font-semibold uppercase transition-all hover:text-primary hidden sm:block"
           href="/about"
         >About</Link>
         <Link 
-          className="ml-2 py-2 px-3 text-secondary font-semibold uppercase transition-all hover:text-primary hidden sm:block"
+          className="ml-2 py-2 px-3 text-secondary dark:text-white-primary font-semibold uppercase transition-all hover:text-primary hidden sm:block"
           href="/projects/1"
         >Projects</Link>
         <Link 
-          className="ml-2 py-2 pl-3 text-secondary font-semibold uppercase transition-all hover:text-primary hidden sm:block"
+          className="ml-2 py-2 pl-3 text-secondary dark:text-white-primary font-semibold uppercase transition-all hover:text-primary hidden sm:block"
           href="/contact"
         >Contact</Link>
 

@@ -77,7 +77,7 @@ export default function Home() {
         <div className="relative max-w-[350px] sm:max-w-[500px] md:max-w-[590px] lg:max-w-[780px]">
           <CustomSpan text="<h1>" />
           
-          <h1 className={`${titleFont.className} leading-none text-6xl md:text-7xl lg:text-8xl text-secondary`}>
+          <h1 className={`${titleFont.className} leading-none text-6xl md:text-7xl lg:text-8xl text-secondary dark:text-white-primary`}>
             Hello 
             <hr className="border-none mb-0 md:mb-4" /> 
             I&apos;m <span className="text-primary">Joseph</span> 
@@ -90,15 +90,15 @@ export default function Home() {
         
         <div className="relative max-w-[320px] md:max-w-[355px] mt-8 mb-12">
           <CustomSpan text="<p>" />
-          <p className="text-lg md:text-xl text-secondary">Especialized in <span className="text-primary">Frontend</span> development</p>    
+          <p className="text-lg md:text-xl text-secondary dark:text-white-primary">Especialized in <span className="text-primary">Frontend</span> development</p>    
           <CustomSpan text="</p>" absolute="absolute -bottom-2 -right-5" /> 
         </div> 
         
         <div>
-          <Link className="px-6 py-2 mr-5 border border-secondary text-secondary hover:border-primary hover:bg-white-secondary transition-all" href="/projects/1">
+          <Link className="px-6 py-2 mr-5 border border-secondary dark:border-primary text-secondary dark:text-white-primary hover:border-primary hover:bg-white-secondary dark:hover:bg-primary transition-all" href="/projects/1">
             Projects
           </Link>
-          <button className="py-0 px-2 border-b-[1px] border-black-secondary text-secondary hover:border-primary">
+          <button className="py-0 px-2 border-b-[1px] border-black-secondary text-secondary dark:text-white-primary hover:border-primary">
             Download CV
           </button>
         </div>
