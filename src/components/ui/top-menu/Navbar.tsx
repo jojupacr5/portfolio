@@ -1,10 +1,10 @@
 'use client'
 import Link from "next/link"
-import { FaMoon, FaSun } from "react-icons/fa"
 import { RiCloseFill, RiMenu3Fill } from "react-icons/ri"
 
 import { useUIStore } from "@/store"
 import { titleFont } from "@/config/fonts"
+import ThemeSwitch from './ThemeSwitch';
 
 export const Navbar = () => {
   const isSideMenuOpen = useUIStore( state => state.isSideMenuOpen);
@@ -37,13 +37,7 @@ export const Navbar = () => {
 
       {/* Theme, Menu */}
       <div className="flex items-center">
-        <button 
-          className="p-2"
-        >
-          <FaMoon className="w-5 h-5 hidden transition-all hover:text-primary" />
-          <FaSun className="w-5 h-5 transition-all hover:text-primary"/>
-        </button>
-
+        <ThemeSwitch />
         <Link 
           className="ml-2 py-2 px-3 text-secondary dark:text-white-primary font-semibold uppercase transition-all hover:text-primary hidden sm:block"
           href="/about"

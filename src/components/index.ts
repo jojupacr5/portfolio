@@ -12,4 +12,4 @@ export { CustomSpan } from "./ui/pages/CustomSpan";
 // About - AboutMe
 export { AboutMe } from "./about/AboutMe";
 export { AlsoMe } from "./about/AlsoMe";
-export { AccordionItem } from "./about/AccordionItem";
+export { Accordion } from "./about/Accordion";

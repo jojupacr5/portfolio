@@ -15,9 +15,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
-      <body className={nunito.className}>
-        <main className="min-h-screen container mx-auto px-4 relative dark:bg-secondary">
+    <html lang="en" className={nunito.className} suppressHydrationWarning>
+      <body className="bg-white-primary dark:bg-secondary">
+        <div className="min-h-screen container mx-auto px-4 relative dark:bg-secondary">
 
           <Navbar />
           <MobileMenu />  
@@ -26,7 +26,7 @@ export default function RootLayout({
 
           <Socials />
           
-        </main>
+        </div>
       </body>
     </html>
   );

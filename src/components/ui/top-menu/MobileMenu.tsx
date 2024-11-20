@@ -21,19 +21,14 @@ export const MobileMenu = () => {
       <nav
         className={
           clsx(
-            "pt__mobile-menu fixed p-5 right-0 w-screen bg-transparent z-20 transform transition-all duration-300",
+            "pt__mobile-menu fixed p-5 right-0 w-screen bg-transparent dark:bg-secondary z-20 transform transition-all duration-300",
             {
               "translate-x-full": !isSideMenuOpen
             }
           )
         }
       >
-        <div className="pt__mobile-menu flex flex-col w-full items-center justify-center">
-          <Link 
-            className="py-2 px-3 text-lg mb-4 transition-all hover:text-primary uppercase font-bold"
-            href="/about"
-            onClick={closeMenu}
-          >About</Link>
+        <div className="pt__mobile-menu flex flex-col w-full items-center justify-center text-secondary dark:text-white-primary">
           <Link 
             className="py-2 px-3 text-lg mb-4 transition-all hover:text-primary uppercase font-bold"
             href="/projects/1"
@@ -49,13 +44,13 @@ export const MobileMenu = () => {
 
           <div className="flex justify-center items-center">
             <a href="/" target="_blank" className="mr-4">
-              <FaGithub className="w-6 h-6 fill-secondary hover:fill-primary transition-all" />
+              <FaGithub className="w-6 h-6 fill-secondary dark:fill-white hover:fill-primary transition-all" />
             </a>
             <a href="/" target="_blank" className="mr-4">
-              <FaLinkedin className="w-6 h-6 fill-secondary hover:fill-primary transition-all" />
+              <FaLinkedin className="w-6 h-6 fill-secondary dark:fill-white hover:fill-primary transition-all" />
             </a>
             <a href="/" target="_blank">
-              <FaInstagram className="w-6 h-6 fill-secondary hover:fill-primary transition-all" />
+              <FaInstagram className="w-6 h-6 fill-secondary dark:fill-white hover:fill-primary transition-all" />
             </a>
           </div>
         </div>
